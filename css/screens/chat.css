@@ -33,7 +33,7 @@
 }
 
 .main-chat {
-  margin-top: 180px;
+  margin-top: 120px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -65,6 +65,23 @@
 .message__author {
   margin-bottom: 5px;
   display: block;
+}
+
+@keyframes bubbleBeat {
+  0% {
+    transform: none;
+  }
+  50% {
+    transform: scale(1.1);
+  }
+  100% {
+    transform: none;
+  }
+}
+
+.message__info:hover {
+  will-change: transform;
+  animation: bubbleBeat 1s linear infinite;
 }
 
 .message__info {
